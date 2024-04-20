@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://odkknfywexdb"]
+
+[ext_resource type="Texture2D" uid="uid://cf5rmoeolbv2i" path="res://assets/Brown.png" id="1_006uc"]
+[ext_resource type="Script" path="res://scenes/control_screen.gd" id="1_8l1ln"]
+[ext_resource type="Texture2D" uid="uid://cqvwqrn3mvcbh" path="res://assets/Cool Text - Jump Adventure 455698774053227.png" id="2_vmqcr"]
+
+[node name="ControlScreen" type="Node"]
+script = ExtResource("1_8l1ln")
+
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_006uc")
+stretch_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 178.0
+offset_top = 29.0
+offset_right = 951.0
+offset_bottom = 209.0
+texture = ExtResource("2_vmqcr")
+
+[node name="Panel" type="Panel" parent="."]
+texture_filter = 1
+offset_left = 178.0
+offset_top = 252.0
+offset_right = 576.0
+offset_bottom = 443.0
+
+[node name="Label" type="Label" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 25.0
+offset_right = 398.0
+offset_bottom = 191.0
+theme_override_font_sizes/font_size = 30
+text = "Move right:    D
+Move left:       A
+Jump:  W or Space
+Restart level:  R"
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+offset_left = 474.0
+offset_top = 485.0
+offset_right = 683.0
+offset_bottom = 587.0
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
