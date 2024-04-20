@@ -1,26 +1,24 @@
 extends Node
 
 @onready var points_label = %PointsLabel
-@onready var collectables_group = $"../SceneObjects/CollectablesGroup"
-
+@onready var collectables_group = null
 var collectibles_collected: int = 0
 var total_collectibles: int = 0
 var finish_line_collected = false
 var points = 0
 
-
 func _ready():
-		# Get the nodes in the group
-	var collectables = collectables_group
-	print("Size " + str( collectables_group))
-	# Iterate through each node and print its data
-	for collectable in collectables:
-		print("Collectable Data:", collectable.get_name(), collectable.position)
-
-	for child in get_tree().get_nodes_in_group("CollectablesGroup"):
-		print(child.name)
-		total_collectibles += 1
-		print("Total collectibles: ", total_collectibles)
+# Find the collectables group node in the scene
+	collectables_group = get_node("../SceneObjects/CollectablesGroup")
+	# Check if collectables_group is valid
+	if collectables_group:
+		# Iterate through each child node of collectables_group
+		for child in collectables_group.get_children():
+			print("Collectable Data:", child.get_name())
+			total_collectibles += 1
+			print("Total collectibles: ", total_collectibles)
+	else:
+		print("Collectables group not found!")
 
 func add_point():
 	points += 1
