@@ -14,9 +14,9 @@ func _ready():
 	if collectables_group:
 		# Iterate through each child node of collectables_group
 		for child in collectables_group.get_children():
-			print("Collectable Data:", child.get_name())
+			#print("Collectable Data:", child.get_name())
 			total_collectibles += 1
-			print("Total collectibles: ", total_collectibles)
+			#print("Total collectibles: ", total_collectibles)
 	else:
 		print("Collectables group not found!")
 
