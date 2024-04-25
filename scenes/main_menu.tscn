@@ -1,11 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6nnbfsx1310w"]
+[gd_scene load_steps=5 format=3 uid="uid://c6nnbfsx1310w"]
 
 [ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_ir7kj"]
 [ext_resource type="Texture2D" uid="uid://cf5rmoeolbv2i" path="res://assets/Brown.png" id="1_va1ld"]
 [ext_resource type="Texture2D" uid="uid://cqvwqrn3mvcbh" path="res://assets/Cool Text - Jump Adventure 455698774053227.png" id="2_logev"]
+[ext_resource type="Script" path="res://scenes/game_manager.gd" id="2_pk214"]
 
 [node name="MainMenu" type="Node"]
+process_mode = 3
 script = ExtResource("1_ir7kj")
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+script = ExtResource("2_pk214")
 
 [node name="Background" type="TextureRect" parent="."]
 texture_filter = 1

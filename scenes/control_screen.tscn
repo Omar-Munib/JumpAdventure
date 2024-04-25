@@ -28,27 +28,28 @@ texture = ExtResource("2_vmqcr")
 texture_filter = 1
 offset_left = 178.0
 offset_top = 252.0
-offset_right = 576.0
-offset_bottom = 443.0
+offset_right = 687.0
+offset_bottom = 495.0
 
 [node name="Label" type="Label" parent="Panel"]
 texture_filter = 1
 layout_mode = 0
 offset_left = 25.0
-offset_right = 398.0
-offset_bottom = 191.0
+offset_right = 415.0
+offset_bottom = 243.0
 theme_override_font_sizes/font_size = 30
 text = "Move right:    D
 Move left:       A
 Jump:  W or Space
-Restart level:  R"
+Restart level:  R
+Pause game:   ESC button"
 
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
-offset_left = 474.0
-offset_top = 485.0
-offset_right = 683.0
-offset_bottom = 587.0
+offset_left = 478.0
+offset_top = 517.0
+offset_right = 687.0
+offset_bottom = 619.0
 theme_override_font_sizes/font_size = 30
 text = "Back"
 

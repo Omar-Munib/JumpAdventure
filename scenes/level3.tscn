@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://hwo8kr6nt78b"]
+[gd_scene load_steps=13 format=3 uid="uid://hwo8kr6nt78b"]
 
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_v51xv"]
 [ext_resource type="Texture2D" uid="uid://bd2umi8g82kwk" path="res://assets/Gray.png" id="2_6mrh1"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ryuof13g1n12" path="res://scenes/finish.tscn" id="7_c5q8d"]
 [ext_resource type="PackedScene" uid="uid://c6nnbfsx1310w" path="res://scenes/main_menu.tscn" id="8_a8dk4"]
 [ext_resource type="PackedScene" uid="uid://digdvu8y0buni" path="res://scenes/spike_trap.tscn" id="9_kchoq"]
+[ext_resource type="PackedScene" uid="uid://c8g0ixi6liln8" path="res://scenes/pause_menu.tscn" id="10_sgl22"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbbsi"]
 texture = ExtResource("3_gq7do")
@@ -555,19 +556,20 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_cbbsi")
 
 [node name="Node" type="Node"]
+process_mode = 3
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
+process_mode = 3
 script = ExtResource("1_v51xv")
 
 [node name="SceneObjects" type="Node" parent="."]
+process_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="SceneObjects"]
 texture_filter = 1
-offset_left = 73.0
-offset_top = 53.0
-offset_right = 2513.0
-offset_bottom = 721.0
+offset_right = 2440.0
+offset_bottom = 668.0
 texture = ExtResource("2_6mrh1")
 stretch_mode = 1
 
@@ -644,6 +646,73 @@ position = Vector2(1845, 269)
 position = Vector2(2349, 85)
 target_level = ExtResource("8_a8dk4")
 
+[node name="SpikesGroup" type="Node" parent="SceneObjects"]
+
+[node name="SpikeTrap" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(632, 627)
+
+[node name="SpikeTrap2" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(680, 627)
+
+[node name="SpikeTrap3" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(728, 627)
+
+[node name="SpikeTrap4" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(776, 627)
+
+[node name="SpikeTrap5" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(441, 630)
+
+[node name="SpikeTrap6" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(105, 628)
+
+[node name="SpikeTrap7" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(153, 627)
+
+[node name="SpikeTrap8" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(201, 627)
+
+[node name="SpikeTrap9" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(59, 628)
+
+[node name="SpikeTrap10" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+texture_filter = 1
+position = Vector2(1834, 508)
+
+[node name="SpikeTrap11" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+texture_filter = 1
+position = Vector2(2027, 411)
+
+[node name="SpikeTrap12" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(1066, 629)
+
+[node name="SpikeTrap13" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(1113, 629)
+
+[node name="SpikeTrap14" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(1161, 629)
+
+[node name="SpikeTrap15" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(1451, 508)
+
+[node name="SpikeTrap16" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(299, 628)
+
+[node name="SpikeTrap17" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(2171, 628)
+
+[node name="SpikeTrap18" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(2219, 628)
+
+[node name="SpikeTrap19" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(2266, 628)
+
+[node name="SpikeTrap20" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(2317, 629)
+
+[node name="SpikeTrap21" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
+position = Vector2(2124, 628)
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -662,67 +731,5 @@ text = "Points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SpikeTrap" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(632, 627)
-
-[node name="SpikeTrap2" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(680, 627)
-
-[node name="SpikeTrap3" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(728, 627)
-
-[node name="SpikeTrap4" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(776, 627)
-
-[node name="SpikeTrap5" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(441, 630)
-
-[node name="SpikeTrap6" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(105, 628)
-
-[node name="SpikeTrap7" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(153, 627)
-
-[node name="SpikeTrap8" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(201, 627)
-
-[node name="SpikeTrap9" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(59, 628)
-
-[node name="SpikeTrap10" parent="." instance=ExtResource("9_kchoq")]
-texture_filter = 1
-position = Vector2(1834, 508)
-
-[node name="SpikeTrap11" parent="." instance=ExtResource("9_kchoq")]
-texture_filter = 1
-position = Vector2(2027, 411)
-
-[node name="SpikeTrap12" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(1066, 629)
-
-[node name="SpikeTrap13" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(1113, 629)
-
-[node name="SpikeTrap14" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(1161, 629)
-
-[node name="SpikeTrap15" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(1451, 508)
-
-[node name="SpikeTrap16" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(299, 628)
-
-[node name="SpikeTrap17" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(2171, 628)
-
-[node name="SpikeTrap18" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(2219, 628)
-
-[node name="SpikeTrap19" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(2266, 628)
-
-[node name="SpikeTrap20" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(2317, 629)
-
-[node name="SpikeTrap21" parent="." instance=ExtResource("9_kchoq")]
-position = Vector2(2124, 628)
+[node name="PauseMenu" parent="UI" node_paths=PackedStringArray("game_manager") instance=ExtResource("10_sgl22")]
+game_manager = NodePath("../../GameManager")

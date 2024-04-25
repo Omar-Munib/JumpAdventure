@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bd6ei81ena782"]
+[gd_scene load_steps=12 format=3 uid="uid://bd6ei81ena782"]
 
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_sbc5a"]
 [ext_resource type="Texture2D" uid="uid://cpieulh257td8" path="res://assets/Green.png" id="2_0jm62"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://d2qq86t6gy02m" path="res://scenes/collectable.tscn" id="6_wxgqo"]
 [ext_resource type="PackedScene" uid="uid://ryuof13g1n12" path="res://scenes/finish.tscn" id="7_dfyfb"]
 [ext_resource type="PackedScene" uid="uid://cnkivx38rcg6q" path="res://scenes/level2.tscn" id="8_vl5k4"]
+[ext_resource type="PackedScene" uid="uid://c8g0ixi6liln8" path="res://scenes/pause_menu.tscn" id="9_my01o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbbsi"]
 texture = ExtResource("3_5brvw")
@@ -476,12 +477,15 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_cbbsi")
 
 [node name="Node" type="Node"]
+process_mode = 3
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
+process_mode = 3
 script = ExtResource("1_sbc5a")
 
 [node name="SceneObjects" type="Node" parent="."]
+process_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="SceneObjects"]
 texture_filter = 1
@@ -568,3 +572,6 @@ theme_override_font_sizes/font_size = 30
 text = "Points: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PauseMenu" parent="UI" node_paths=PackedStringArray("game_manager") instance=ExtResource("9_my01o")]
+game_manager = NodePath("../../GameManager")
