@@ -17,6 +17,12 @@ func _on_button_3_pressed():
 	game_manager.game_paused = false
 	get_tree().change_scene_to_file("res://scenes/level3.tscn")
 
+func _on_level_4_button_pressed():
+	game_manager.game_paused = false
+	get_tree().change_scene_to_file("res://scenes/level4.tscn")
+
 func _on_button_4_pressed():
 	game_manager.game_paused = false
 	get_tree().change_scene_to_file("res://scenes/control_screen.tscn")
+
+

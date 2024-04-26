@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk30hqw8r278s"]
+
+[ext_resource type="Texture2D" uid="uid://cote3u0e7i5mx" path="res://assets/Brown Off.png" id="1_2ony8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ps6x8"]
+size = Vector2(33.5, 5)
+
+[node name="OneWayPlatform" type="Sprite2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_2ony8")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0.25, 0.5)
+shape = SubResource("RectangleShape2D_ps6x8")
+one_way_collision = true

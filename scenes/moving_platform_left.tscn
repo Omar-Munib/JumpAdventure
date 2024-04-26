@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://jj3ytu1fhs6o"]
+
+[ext_resource type="Texture2D" uid="uid://cg3p6v18e7yan" path="res://assets/Jungle tile set/Assets/Assets.png" id="1_irt26"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1gv0"]
+size = Vector2(48, 6)
+
+[sub_resource type="Animation" id="Animation_l3gs6"]
+resource_name = "animated_left_looping"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(-149, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_k4imp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3cx2l"]
+_data = {
+"RESET": SubResource("Animation_k4imp"),
+"animated_left_looping": SubResource("Animation_l3gs6")
+}
+
+[node name="MovingPlatformLeft" type="Node2D"]
+
+[node name="PlatformLeft" type="AnimatableBody2D" parent="."]
+scale = Vector2(2, 2)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="PlatformLeft"]
+texture = ExtResource("1_irt26")
+region_enabled = true
+region_rect = Rect2(223.533, 52.4241, 49.0524, 6.85895)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformLeft"]
+shape = SubResource("RectangleShape2D_e1gv0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlatformLeft"]
+libraries = {
+"": SubResource("AnimationLibrary_3cx2l")
+}
+autoplay = "animated_left_looping"

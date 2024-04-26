@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0koxy7fc7olr"]
+
+[ext_resource type="Texture2D" uid="uid://bwir2kcebnnb4" path="res://assets/Grey On (32x8).png" id="1_e63io"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2s7yy"]
+size = Vector2(256, 5.5)
+
+[node name="RoadBlockPlatform" type="Sprite2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_e63io")
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 0.75)
+shape = SubResource("RectangleShape2D_2s7yy")

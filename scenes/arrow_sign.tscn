@@ -1,0 +1,89 @@
+[gd_scene load_steps=13 format=3 uid="uid://cj8nuhonn4oxg"]
+
+[ext_resource type="Texture2D" uid="uid://b3f682d1f7jdy" path="res://assets/Idle (18x18).png" id="1_osh80"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxgry"]
+atlas = ExtResource("1_osh80")
+region = Rect2(0, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o73j8"]
+atlas = ExtResource("1_osh80")
+region = Rect2(18, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qj8vc"]
+atlas = ExtResource("1_osh80")
+region = Rect2(36, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8b8ub"]
+atlas = ExtResource("1_osh80")
+region = Rect2(54, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnprr"]
+atlas = ExtResource("1_osh80")
+region = Rect2(72, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfeq5"]
+atlas = ExtResource("1_osh80")
+region = Rect2(90, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkfbu"]
+atlas = ExtResource("1_osh80")
+region = Rect2(108, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xva8"]
+atlas = ExtResource("1_osh80")
+region = Rect2(126, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilkga"]
+atlas = ExtResource("1_osh80")
+region = Rect2(144, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fn0wm"]
+atlas = ExtResource("1_osh80")
+region = Rect2(162, 0, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yfyap"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxgry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o73j8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qj8vc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8b8ub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnprr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfeq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkfbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xva8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilkga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fn0wm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="ArrowSign" type="AnimatedSprite2D"]
+texture_filter = 1
+position = Vector2(3.5, 4)
+scale = Vector2(1.38889, 1.44444)
+sprite_frames = SubResource("SpriteFrames_yfyap")
+autoplay = "default"
+frame_progress = 0.088494

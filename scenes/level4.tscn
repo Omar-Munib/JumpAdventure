@@ -1,14 +1,20 @@
-[gd_scene load_steps=12 format=3 uid="uid://duk4h4c1kmmp2"]
+[gd_scene load_steps=18 format=3 uid="uid://duk4h4c1kmmp2"]
 
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_b5r8w"]
 [ext_resource type="Texture2D" uid="uid://ipa4htndo135" path="res://assets/Jungle tile set/Assets/Background_2.png" id="2_7t752"]
 [ext_resource type="Texture2D" uid="uid://cg3p6v18e7yan" path="res://assets/Jungle tile set/Assets/Assets.png" id="3_8n05t"]
 [ext_resource type="PackedScene" uid="uid://dx8uuy3jgu74l" path="res://scenes/main_character.tscn" id="4_ksqpu"]
 [ext_resource type="Script" path="res://scenes/main_character.gd" id="5_ndhos"]
+[ext_resource type="PackedScene" uid="uid://d2qq86t6gy02m" path="res://scenes/collectable.tscn" id="6_aurs2"]
 [ext_resource type="PackedScene" uid="uid://ryuof13g1n12" path="res://scenes/finish.tscn" id="7_tij8i"]
 [ext_resource type="PackedScene" uid="uid://c6nnbfsx1310w" path="res://scenes/main_menu.tscn" id="8_4j7y7"]
 [ext_resource type="PackedScene" uid="uid://hpo5brxy3ol6" path="res://scenes/animated_platform.tscn" id="9_3khnj"]
+[ext_resource type="PackedScene" uid="uid://jj3ytu1fhs6o" path="res://scenes/moving_platform_left.tscn" id="10_37gic"]
 [ext_resource type="PackedScene" uid="uid://c8g0ixi6liln8" path="res://scenes/pause_menu.tscn" id="10_bwjne"]
+[ext_resource type="PackedScene" uid="uid://bk30hqw8r278s" path="res://scenes/one_way_platform.tscn" id="11_e1lcs"]
+[ext_resource type="PackedScene" uid="uid://d0koxy7fc7olr" path="res://scenes/road_block_platform.tscn" id="12_5yibu"]
+[ext_resource type="PackedScene" uid="uid://cj8nuhonn4oxg" path="res://scenes/arrow_sign.tscn" id="13_j554y"]
+[ext_resource type="PackedScene" uid="uid://hwfxl2uddg5x" path="res://scenes/hint_panel.tscn" id="15_rj61y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dpd61"]
 texture = ExtResource("3_8n05t")
@@ -159,9 +165,11 @@ texture = ExtResource("3_8n05t")
 11:2/0 = 0
 11:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 11:2/0/physics_layer_0/angular_velocity = 0.0
+11:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 12:2/0 = 0
 12:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 12:2/0/physics_layer_0/angular_velocity = 0.0
+12:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:2/0 = 0
 13:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 13:2/0/physics_layer_0/angular_velocity = 0.0
@@ -213,27 +221,34 @@ texture = ExtResource("3_8n05t")
 9:3/0 = 0
 9:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:3/0/physics_layer_0/angular_velocity = 0.0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:3/0 = 0
 10:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:3/0/physics_layer_0/angular_velocity = 0.0
+10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -0.0883884, -8, -0.0883884)
 11:3/0 = 0
 11:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 11:3/0/physics_layer_0/angular_velocity = 0.0
+11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 12:3/0 = 0
 12:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 12:3/0/physics_layer_0/angular_velocity = 0.0
+12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3.8007, 2.56326, 0.972272, 2.20971, 8, -2.03293, 8, -1.85616, 0.441941, -8, 0.441941)
 13:3/0 = 0
 13:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 13:3/0/physics_layer_0/angular_velocity = 0.0
 14:3/0 = 0
 14:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 14:3/0/physics_layer_0/angular_velocity = 0.0
+14:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:3/0 = 0
 15:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:3/0/physics_layer_0/angular_velocity = 0.0
+15:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:3/0 = 0
 16:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:3/0/physics_layer_0/angular_velocity = 0.0
+16:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:3/0 = 0
 17:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 17:3/0/physics_layer_0/angular_velocity = 0.0
@@ -289,6 +304,7 @@ texture = ExtResource("3_8n05t")
 14:4/0 = 0
 14:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 14:4/0/physics_layer_0/angular_velocity = 0.0
+14:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:4/0 = 0
 15:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:4/0/physics_layer_0/angular_velocity = 0.0
@@ -326,18 +342,22 @@ texture = ExtResource("3_8n05t")
 6:5/0 = 0
 6:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:5/0/physics_layer_0/angular_velocity = 0.0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:5/0 = 0
 7:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:5/0/physics_layer_0/angular_velocity = 0.0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:5/0 = 0
 8:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:5/0/physics_layer_0/angular_velocity = 0.0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:5/0 = 0
 9:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:5/0/physics_layer_0/angular_velocity = 0.0
 10:5/0 = 0
 10:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:5/0/physics_layer_0/angular_velocity = 0.0
+10:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3.8007, 2.56326, 0.972272, 2.20971, 8, -2.03293, 8, -1.85616, 0.441941, -8, 0.441941)
 11:5/0 = 0
 11:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 11:5/0/physics_layer_0/angular_velocity = 0.0
@@ -347,9 +367,11 @@ texture = ExtResource("3_8n05t")
 13:5/0 = 0
 13:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 13:5/0/physics_layer_0/angular_velocity = 0.0
+13:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:5/0 = 0
 14:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 14:5/0/physics_layer_0/angular_velocity = 0.0
+14:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:5/0 = 0
 16:5/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:5/0/physics_layer_0/angular_velocity = 0.0
@@ -406,7 +428,6 @@ texture = ExtResource("3_8n05t")
 14:6/0 = 0
 14:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 14:6/0/physics_layer_0/angular_velocity = 0.0
-14:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 15:6/0 = 0
 15:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:6/0/physics_layer_0/angular_velocity = 0.0
@@ -475,7 +496,6 @@ texture = ExtResource("3_8n05t")
 15:7/0 = 0
 15:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:7/0/physics_layer_0/angular_velocity = 0.0
-15:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 17:7/0 = 0
 17:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 17:7/0/physics_layer_0/angular_velocity = 0.0
@@ -763,6 +783,7 @@ texture = ExtResource("3_8n05t")
 15:13/0 = 0
 15:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:13/0/physics_layer_0/angular_velocity = 0.0
+15:13/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:13/0 = 0
 16:13/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:13/0/physics_layer_0/angular_velocity = 0.0
@@ -946,12 +967,15 @@ texture = ExtResource("3_8n05t")
 6:17/0 = 0
 6:17/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:17/0/physics_layer_0/angular_velocity = 0.0
+6:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:17/0 = 0
 7:17/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:17/0/physics_layer_0/angular_velocity = 0.0
+7:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:17/0 = 0
 8:17/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 8:17/0/physics_layer_0/angular_velocity = 0.0
+8:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:17/0 = 0
 9:17/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:17/0/physics_layer_0/angular_velocity = 0.0
@@ -961,12 +985,15 @@ texture = ExtResource("3_8n05t")
 11:17/0 = 0
 11:17/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 11:17/0/physics_layer_0/angular_velocity = 0.0
+11:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 12:17/0 = 0
 12:17/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 12:17/0/physics_layer_0/angular_velocity = 0.0
+12:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:17/0 = 0
 13:17/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 13:17/0/physics_layer_0/angular_velocity = 0.0
+13:17/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:18/0 = 0
 1:18/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:18/0/physics_layer_0/angular_velocity = 0.0
@@ -1139,7 +1166,7 @@ texture_filter = 1
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_gondm")
 format = 2
-layer_0/tile_data = PackedInt32Array(851991, 196608, 0, 851990, 196608, 0, 851989, 196608, 0, 851988, 196608, 0, 851987, 196608, 0, 851986, 196608, 0, 851985, 196608, 0, 851984, 196608, 0, 851983, 196608, 0, 851982, 196608, 0, 851981, 196608, 0, 851980, 196608, 0, 851979, 196608, 0, 851978, 196608, 0, 851977, 196608, 0, 851976, 196608, 0, 851975, 196608, 0, 851974, 196608, 0, 851973, 196608, 0, 851972, 196608, 0, 851971, 196608, 0, 851970, 196608, 0, 851969, 196608, 0, 851968, 131072, 2, 851992, 196608, 0, 851993, 196608, 0, 851994, 196608, 0, 851995, 196608, 0, 851996, 196608, 0, 851997, 196608, 0, 851998, 196608, 0, 851999, 196608, 0, 852000, 196608, 0, 852001, 196608, 0, 852002, 196608, 0, 852003, 196608, 0, 852004, 196608, 0, 852005, 196608, 0, 852006, 196608, 0, 852007, 196608, 0, 852008, 196608, 0, 852009, 196608, 0, 852010, 196608, 0, 852011, 196608, 0, 852012, 196608, 0, 852013, 196608, 0, 852014, 196608, 0, 852015, 196608, 0, 852016, 196608, 0, 852017, 196608, 0, 852018, 131072, 2, 30, 131072, 2, 50, 131072, 2, 65586, 131072, 2, 131122, 131072, 2, 196658, 131072, 2, 262194, 131072, 2, 327730, 131072, 2, 393266, 131072, 2, 458802, 131072, 2, 524338, 131072, 2, 589874, 131072, 2, 655410, 131072, 2, 720946, 131072, 2, 786482, 131072, 2, 262144, 131072, 2, 327680, 131072, 2, 393216, 131072, 2, 458752, 131072, 2, 524288, 131072, 2, 589824, 131072, 2, 655360, 131072, 2, 720896, 131072, 2, 786432, 131072, 2, -65506, 131072, 2, -131042, 131072, 2, -196578, 131072, 2, -262114, 131072, 2, -327650, 131072, 2, -393186, 131072, 2, -458722, 131072, 2, -524258, 131072, 2, -589794, 131072, 2, -655330, 131072, 2, -720866, 131072, 2, -786402, 131072, 2, -851938, 131072, 2, -917474, 131072, 2, -983010, 131072, 2, -1048546, 131072, 2, -1048545, 131072, 2, -1048544, 131072, 2, -1048543, 131072, 2, -1048542, 131072, 2, -1048541, 131072, 2, -1048540, 131072, 2, -1048539, 131072, 2, -1048538, 131072, 2, -1048537, 131072, 2, -1048536, 131072, 2, -1048535, 131072, 2, -1048534, 131072, 2, -1048533, 131072, 2, -1048532, 131072, 2, -1048531, 131072, 2, -1048530, 131072, 2, -1048529, 131072, 2, -1048528, 131072, 2, -1048527, 131072, 2, -1048526, 131072, 2, -982990, 131072, 2, -917454, 131072, 2, -851918, 131072, 2, -786382, 131072, 2, -720846, 131072, 2, -655310, 131072, 2, -589774, 131072, 2, -524238, 131072, 2, -458702, 131072, 2, -393166, 131072, 2, -327630, 131072, 2, -262094, 131072, 2, -196558, 131072, 2, -131022, 131072, 2, -65486, 131072, 2, 262174, 131072, 2, 262173, 131072, 2, 262172, 131072, 2, 262171, 131072, 2, 262170, 131072, 2, 262169, 131072, 2, 262168, 131072, 2, 262167, 131072, 2, 262166, 131072, 2, 262165, 131072, 2, 262164, 131072, 2, 262163, 131072, 2, 262162, 131072, 2, 262161, 131072, 2, 262160, 131072, 2, 262159, 131072, 2, 262158, 131072, 2, 262157, 131072, 2, 262156, 131072, 2, 262155, 131072, 2, 262154, 131072, 2, 262153, 131072, 2, 262152, 131072, 2, 262151, 131072, 2, 262150, 131072, 2, 262149, 131072, 2, 262148, 131072, 2, 262147, 131072, 2, 262146, 131072, 2, 262145, 131072, 2, 65566, 131072, 2, 131102, 131072, 2, 196638, 131072, 2, 720907, 1048576, 0, 786443, 1048576, 1, 720908, 1114112, 0, 786444, 1114112, 1, 720909, 1048576, 0, 786445, 1048576, 1, 720910, 1114112, 0, 786446, 1114112, 1, 786435, 851968, 0, 786436, 851968, 0, 786437, 851968, 0, 786438, 851968, 0, 720921, 1048576, 0, 786457, 1048576, 1, 720922, 1114112, 0, 786458, 1114112, 1, 786455, 917504, 2, 786456, 983040, 2, 786459, 917504, 2, 786460, 983040, 2, 720936, 589824, 17, 786472, 589824, 18, 720937, 655360, 17, 786473, 655360, 18, 589864, 589824, 17, 655400, 589824, 18, 458792, 589824, 17, 524328, 589824, 18, 327720, 589824, 17, 393256, 589824, 18, 196648, 589824, 17, 262184, 589824, 18, 65576, 589824, 17, 131112, 589824, 18, -65496, 589824, 17, 40, 589824, 18, -196568, 589824, 17, -131032, 589824, 18, -262104, 589824, 18, -262103, 655360, 18, -196567, 655360, 17, -131031, 655360, 18, -65495, 655360, 17, 41, 655360, 18, 65577, 655360, 17, 131113, 655360, 18, 196649, 655360, 17, 262185, 655360, 18, 327721, 655360, 17, 393257, 655360, 18, 458793, 655360, 17, 524329, 655360, 18, 589865, 655360, 17, 655401, 655360, 18, -262105, 589824, 18, -196569, 589824, 17, -131033, 589824, 18, -65497, 589824, 17, 39, 589824, 18, 65575, 589824, 17, 131111, 589824, 18, 196647, 589824, 17, 262183, 589824, 18, 327719, 589824, 17, 393255, 589824, 18, 458791, 589824, 17, 524327, 589824, 18, 589863, 589824, 17, 655399, 589824, 18, 720935, 589824, 17, 786471, 589824, 18, -655321, 131072, 17, -589785, 131072, 16, -524249, 131072, 16, -655320, 196608, 17, -589784, 196608, 18, -524248, 196608, 16, -655319, 262144, 16, -589783, 262144, 16, -524247, 262144, 16, -196571, 131072, 19, -262108, 131072, 19, -327645, 131072, 19, -196570, 196608, 19, -196566, 196608, 19, -196565, 262144, 19, -262100, 262144, 19, -327635, 262144, 19, -393171, 327680, 17, -458707, 327680, 17, -524243, 327680, 17, -589779, 327680, 17, -655315, 327680, 16, -720852, 327680, 16, -786389, 327680, 16, -786395, 65536, 16, -851930, 65536, 16, -851929, 196608, 15, -851928, 196608, 15, -851927, 196608, 15, -851926, 327680, 16, -720860, 65536, 16, -655325, 65536, 16, -262107, 131072, 18, -327644, 131072, 18, -786390, 262144, 16, -720853, 262144, 16, -655316, 262144, 16, -327636, 262144, 18, -262101, 262144, 18, -720856, 196608, 16, -458716, 131072, 17, -524251, 196608, 16, -458715, 131072, 18, -393179, 131072, 18, -458714, 196608, 17, -458713, 262144, 17, -458712, 131072, 17, -393176, 196608, 18, -458711, 131072, 17, -589787, 196608, 17, -655322, 131072, 16, -589786, 131072, 16, -524250, 196608, 16, -393177, 131072, 18, -393175, 131072, 17, -458710, 196608, 16, -589782, 196608, 17, -524246, 196608, 16, -524245, 262144, 18, -393178, 131072, 18, -393174, 196608, 17, -458709, 262144, 18, -327638, 262144, 18, -393173, 262144, 18, -589789, 65536, 17, -524253, 65536, 17, -458717, 65536, 17, -393181, 65536, 17, -786394, 131072, 16, -720859, 131072, 16, -655324, 131072, 16, -786393, 196608, 17, -720857, 196608, 17, -720858, 196608, 17, -655323, 196608, 17, -589788, 196608, 17, -524252, 196608, 17, -393180, 196608, 17, -327643, 196608, 17, -262106, 196608, 17, -327642, 196608, 17, -327641, 196608, 17, -327640, 196608, 17, -327639, 196608, 17, -262102, 196608, 17, -327637, 196608, 17, -458708, 196608, 17, -393172, 196608, 17, -524244, 196608, 17, -589780, 196608, 17, -589781, 262144, 18, -655318, 196608, 17, -720854, 196608, 17, -655317, 196608, 17, -720855, 262144, 16, -786391, 196608, 17, -786392, 196608, 17, 65578, 65536, 16, 65579, 131072, 16, 43, 65536, 16, -65492, 65536, 16, -65491, 196608, 15, -65490, 327680, 16, 47, 327680, 16, 65583, 327680, 17, 131119, 327680, 17, 196655, 262144, 19, 196654, 262144, 18, 262190, 262144, 19, 262188, 196608, 19, 262189, 196608, 19, 262187, 196608, 19, 262186, 131072, 19, 46, 262144, 16, 44, 131072, 16, 45, 196608, 16, 65581, 196608, 16, 65582, 196608, 16, 131118, 196608, 16, 131117, 131072, 16, 196653, 196608, 16, 196652, 196608, 16, 131116, 196608, 16, 65580, 196608, 16, 131115, 196608, 16, 131114, 131072, 16, 196650, 131072, 18, 196651, 196608, 16)
+layer_0/tile_data = PackedInt32Array(851991, 196608, 0, 851990, 196608, 0, 851989, 196608, 0, 851988, 196608, 0, 851987, 196608, 0, 851986, 196608, 0, 851985, 196608, 0, 851984, 196608, 0, 851983, 196608, 0, 851982, 196608, 0, 851981, 196608, 0, 851980, 196608, 0, 851979, 196608, 0, 851978, 196608, 0, 851977, 196608, 0, 851976, 196608, 0, 851975, 196608, 0, 851974, 196608, 0, 851973, 196608, 0, 851972, 196608, 0, 851971, 196608, 0, 851970, 196608, 0, 851969, 196608, 0, 851968, 131072, 2, 851992, 196608, 0, 851993, 196608, 0, 851994, 196608, 0, 851995, 196608, 0, 851996, 196608, 0, 851997, 196608, 0, 851998, 196608, 0, 851999, 196608, 0, 852000, 196608, 0, 852001, 196608, 0, 852002, 196608, 0, 852003, 196608, 0, 852004, 196608, 0, 852005, 196608, 0, 852006, 196608, 0, 852007, 196608, 0, 852008, 196608, 0, 852009, 196608, 0, 852010, 196608, 0, 852011, 196608, 0, 852012, 196608, 0, 852013, 196608, 0, 852014, 196608, 0, 852015, 196608, 0, 852016, 196608, 0, 852017, 196608, 0, 852018, 131072, 2, 30, 131072, 2, 50, 131072, 2, 65586, 131072, 2, 131122, 131072, 2, 196658, 131072, 2, 262194, 131072, 2, 327730, 131072, 2, 393266, 131072, 2, 458802, 131072, 2, 524338, 131072, 2, 589874, 131072, 2, 655410, 131072, 2, 720946, 131072, 2, 786482, 131072, 2, 262144, 131072, 2, 327680, 131072, 2, 393216, 131072, 2, 458752, 131072, 2, 524288, 131072, 2, 589824, 131072, 2, 655360, 131072, 2, 720896, 131072, 2, 786432, 131072, 2, -65506, 131072, 2, -131042, 131072, 2, -196578, 131072, 2, -262114, 131072, 2, -327650, 131072, 2, -393186, 131072, 2, -458722, 131072, 2, -524258, 131072, 2, -589794, 131072, 2, -655330, 131072, 2, -720866, 131072, 2, -786402, 131072, 2, -851938, 131072, 2, -917474, 131072, 2, -983010, 131072, 2, -1048546, 131072, 2, -1048545, 131072, 2, -1048544, 131072, 2, -1048543, 131072, 2, -1048542, 131072, 2, -1048541, 131072, 2, -1048540, 131072, 2, -1048539, 131072, 2, -1048538, 131072, 2, -1048537, 131072, 2, -1048536, 131072, 2, -1048535, 131072, 2, -1048534, 131072, 2, -1048533, 131072, 2, -1048532, 131072, 2, -1048531, 131072, 2, -1048530, 131072, 2, -1048529, 131072, 2, -1048528, 131072, 2, -1048527, 131072, 2, -1048526, 131072, 2, -982990, 131072, 2, -917454, 131072, 2, -851918, 131072, 2, -786382, 131072, 2, -720846, 131072, 2, -655310, 131072, 2, -589774, 131072, 2, -524238, 131072, 2, -458702, 131072, 2, -393166, 131072, 2, -327630, 131072, 2, -262094, 131072, 2, -196558, 131072, 2, -131022, 131072, 2, -65486, 131072, 2, 262174, 131072, 2, 262173, 131072, 2, 262172, 131072, 2, 262171, 131072, 2, 262170, 131072, 2, 262169, 131072, 2, 262168, 131072, 2, 262167, 131072, 2, 262166, 131072, 2, 262165, 131072, 2, 262164, 131072, 2, 262163, 131072, 2, 262162, 131072, 2, 262161, 131072, 2, 262160, 131072, 2, 262159, 131072, 2, 262158, 131072, 2, 262157, 131072, 2, 262156, 131072, 2, 262155, 131072, 2, 262154, 131072, 2, 262153, 131072, 2, 262152, 131072, 2, 262151, 131072, 2, 262150, 131072, 2, 262149, 131072, 2, 262148, 131072, 2, 262147, 131072, 2, 262146, 131072, 2, 262145, 131072, 2, 65566, 131072, 2, 131102, 131072, 2, 196638, 131072, 2, 720907, 1048576, 0, 786443, 1048576, 1, 720908, 1114112, 0, 786444, 1114112, 1, 720909, 1048576, 0, 786445, 1048576, 1, 720910, 1114112, 0, 786446, 1114112, 1, 786435, 851968, 0, 786436, 851968, 0, 786437, 851968, 0, 786438, 851968, 0, 720921, 1048576, 0, 786457, 1048576, 1, 720922, 1114112, 0, 786458, 1114112, 1, 786455, 917504, 2, 786456, 983040, 2, 786459, 917504, 2, 786460, 983040, 2, 720936, 589824, 17, 786472, 589824, 18, 720937, 655360, 17, 786473, 655360, 18, 589864, 589824, 17, 655400, 589824, 18, 458792, 589824, 17, 524328, 589824, 18, 327720, 589824, 17, 393256, 589824, 18, 196648, 589824, 17, 262184, 589824, 18, 65576, 589824, 17, 131112, 589824, 18, -65496, 589824, 17, 40, 589824, 18, -196568, 589824, 17, -131032, 589824, 18, -262104, 589824, 18, -262103, 655360, 18, -196567, 655360, 17, -131031, 655360, 18, -65495, 655360, 17, 41, 655360, 18, 65577, 655360, 17, 131113, 655360, 18, 196649, 655360, 17, 262185, 655360, 18, 327721, 655360, 17, 393257, 655360, 18, 458793, 655360, 17, 524329, 655360, 18, 589865, 655360, 17, 655401, 655360, 18, -262105, 589824, 18, -196569, 589824, 17, -131033, 589824, 18, -65497, 589824, 17, 39, 589824, 18, 65575, 589824, 17, 131111, 589824, 18, 196647, 589824, 17, 262183, 589824, 18, 327719, 589824, 17, 393255, 589824, 18, 458791, 589824, 17, 524327, 589824, 18, 589863, 589824, 17, 655399, 589824, 18, 720935, 589824, 17, 786471, 589824, 18, -655321, 131072, 17, -589785, 131072, 16, -524249, 131072, 16, -655320, 196608, 17, -589784, 196608, 18, -524248, 196608, 16, -655319, 262144, 16, -589783, 262144, 16, -524247, 262144, 16, -196571, 131072, 19, -262108, 131072, 19, -327645, 131072, 19, -196570, 196608, 19, -196566, 196608, 19, -196565, 262144, 19, -262100, 262144, 19, -327635, 262144, 19, -393171, 327680, 17, -458707, 327680, 17, -524243, 327680, 17, -589779, 327680, 17, -655315, 327680, 16, -720852, 327680, 16, -786389, 327680, 16, -786395, 65536, 16, -851930, 65536, 16, -851929, 196608, 15, -851928, 196608, 15, -851927, 196608, 15, -851926, 327680, 16, -720860, 65536, 16, -655325, 65536, 16, -262107, 131072, 18, -327644, 131072, 18, -786390, 262144, 16, -720853, 262144, 16, -655316, 262144, 16, -327636, 262144, 18, -262101, 262144, 18, -720856, 196608, 16, -458716, 131072, 17, -524251, 196608, 16, -458715, 131072, 18, -393179, 131072, 18, -458714, 196608, 17, -458713, 262144, 17, -458712, 131072, 17, -393176, 196608, 18, -458711, 131072, 17, -589787, 196608, 17, -655322, 131072, 16, -589786, 131072, 16, -524250, 196608, 16, -393177, 131072, 18, -393175, 131072, 17, -458710, 196608, 16, -589782, 196608, 17, -524246, 196608, 16, -524245, 262144, 18, -393178, 131072, 18, -393174, 196608, 17, -458709, 262144, 18, -327638, 262144, 18, -393173, 262144, 18, -589789, 65536, 17, -524253, 65536, 17, -458717, 65536, 17, -393181, 65536, 17, -786394, 131072, 16, -720859, 131072, 16, -655324, 131072, 16, -786393, 196608, 17, -720857, 196608, 17, -720858, 196608, 17, -655323, 196608, 17, -589788, 196608, 17, -524252, 196608, 17, -393180, 196608, 17, -327643, 196608, 17, -262106, 196608, 17, -327642, 196608, 17, -327641, 196608, 17, -327640, 196608, 17, -327639, 196608, 17, -262102, 196608, 17, -327637, 196608, 17, -458708, 196608, 17, -393172, 196608, 17, -524244, 196608, 17, -589780, 196608, 17, -589781, 262144, 18, -655318, 196608, 17, -720854, 196608, 17, -655317, 196608, 17, -720855, 262144, 16, -786391, 196608, 17, -786392, 196608, 17, 65578, 65536, 16, 65579, 131072, 16, 43, 65536, 16, -65492, 65536, 16, -65491, 196608, 15, -65490, 327680, 16, 47, 327680, 16, 65583, 327680, 17, 131119, 327680, 17, 196655, 262144, 19, 196654, 262144, 18, 262190, 262144, 19, 262188, 196608, 19, 262189, 196608, 19, 262187, 196608, 19, 262186, 720896, 3, 46, 262144, 16, 44, 131072, 16, 45, 196608, 16, 65581, 196608, 16, 65582, 196608, 16, 131118, 196608, 16, 131117, 131072, 16, 196653, 196608, 16, 196652, 196608, 16, 131116, 196608, 16, 65580, 196608, 16, 131115, 196608, 16, 131114, 131072, 16, 196650, 131072, 18, 196651, 196608, 16, 196644, 262144, 17, 196645, 458752, 17, 196646, 524288, 17, 131105, 131072, 16, 196641, 131072, 17, 262177, 131072, 18, 131106, 196608, 16, 196642, 131072, 17, 262178, 196608, 16, 131107, 262144, 16, 196643, 262144, 17, 262179, 262144, 18, 131108, 327680, 16, 262180, 327680, 18, 131104, 65536, 16, 196640, 65536, 17, 262176, 65536, 18, 65571, 262144, 15, 65569, 131072, 15, 65570, 196608, 15, 327713, 131072, 19, 327714, 196608, 19, 327715, 262144, 19, 720902, 196608, 0, 720903, 196608, 0, 589827, 196608, 0, 524290, 196608, 0, 458753, 196608, 0, 589826, 196608, 2, 589825, 131072, 2, 524289, 131072, 2, 655363, 327680, 3, 655362, 131072, 2, 655361, 131072, 2, 720897, 262144, 4, 589833, 196608, 0, 589834, 196608, 0, 589835, 196608, 0, 655367, 851968, 0, 393217, 851968, 0, 524299, 851968, 0, 524317, 196608, 0, 524318, 196608, 0, 589855, 196608, 0, 655392, 196608, 0, 589859, 196608, 0, 655395, 589824, 3, 720931, 589824, 4, 786467, 589824, 5, 655396, 655360, 3, 655397, 720896, 3, 655398, 786432, 3, 720934, 786432, 4, 786470, 786432, 5, 589866, 655360, 3, 589867, 720896, 3, 589868, 786432, 3, 720940, 786432, 5, 786476, 786432, 5, 655404, 786432, 4, 458799, 589824, 3, 458800, 655360, 3, 458801, 720896, 3, 589871, 589824, 5, 655407, 589824, 5, 720943, 589824, 5, 786479, 589824, 5, 524335, 589824, 4, 393258, 720896, 3, 393259, 786432, 3, 458795, 589824, 4, 524331, 589824, 5, 65574, 655360, 3, 34, 655360, 3, -327649, 655360, 3, -720861, 655360, 3, -851931, 655360, 3, -917466, 655360, 805306371, -917465, 655360, 805306371, -917464, 655360, 805306371, -917463, 655360, 805306371, -917462, 655360, 805306371, 35, 655360, 3, -65505, 655360, 3, -196574, 655360, 268435459, -196575, 655360, 536870915, -262110, 655360, 536870915, 32, 655360, 3)
 
 [node name="CharacterBody2D" parent="SceneObjects" instance=ExtResource("4_ksqpu")]
 position = Vector2(21, 536)
@@ -1152,14 +1179,153 @@ position_smoothing_speed = 8.0
 
 [node name="CollectablesGroup" type="Node" parent="SceneObjects"]
 
+[node name="Collectable" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(63, 291)
+
+[node name="Collectable2" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(963, 583)
+
+[node name="Collectable3" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(1248, 574)
+
+[node name="Collectable4" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(497, 396)
+
+[node name="Collectable5" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(966, 351)
+
+[node name="Collectable6" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(1502, 389)
+
+[node name="Collectable7" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(1694, 386)
+
+[node name="Collectable8" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(2329, 291)
+
+[node name="Collectable9" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(2105, 117)
+
+[node name="Collectable10" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(1669, 205)
+
+[node name="Collectable11" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(1671, -47)
+
+[node name="Collectable12" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(1593, -160)
+
+[node name="Collectable13" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(1621, -443)
+
+[node name="Collectable14" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(1507, -286)
+
+[node name="Collectable15" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(1792, -662)
+
+[node name="Collectable16" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(1936, -687)
+
+[node name="Collectable17" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(2308, -599)
+
+[node name="Collectable18" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(2312, -464)
+
+[node name="Collectable19" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(2313, -237)
+
+[node name="Collectable20" parent="SceneObjects/CollectablesGroup" instance=ExtResource("6_aurs2")]
+position = Vector2(2007, -293)
+
 [node name="Finish" parent="SceneObjects" instance=ExtResource("7_tij8i")]
-position = Vector2(2323, -483)
+position = Vector2(1946, -392)
 target_level = ExtResource("8_4j7y7")
 
 [node name="SpikesGroup" type="Node" parent="SceneObjects"]
 
-[node name="MovingPlatform" parent="SceneObjects" instance=ExtResource("9_3khnj")]
-position = Vector2(1262, 392)
+[node name="MovingPlatformsGroup" type="Node" parent="SceneObjects"]
+
+[node name="MovingPlatformLeft" parent="SceneObjects/MovingPlatformsGroup" instance=ExtResource("10_37gic")]
+position = Vector2(1219, 441)
+
+[node name="MovingPlatform" parent="SceneObjects/MovingPlatformsGroup" instance=ExtResource("9_3khnj")]
+position = Vector2(726, 441)
+
+[node name="OneWayPlatformsGroup" type="Node" parent="SceneObjects"]
+
+[node name="OneWayPlatform" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(1632, -312)
+
+[node name="OneWayPlatform2" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(1632, -400)
+
+[node name="OneWayPlatform3" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(1568, -400)
+
+[node name="OneWayPlatform4" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(1568, -480)
+
+[node name="OneWayPlatform5" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(2193, -556)
+
+[node name="OneWayPlatform6" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(2257, -556)
+
+[node name="OneWayPlatform7" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(2321, -556)
+
+[node name="OneWayPlatform8" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(2321, -425)
+
+[node name="OneWayPlatform9" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(1952, -332)
+
+[node name="OneWayPlatform10" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(2015, -332)
+
+[node name="OneWayPlatform11" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(2323, -198)
+
+[node name="OneWayPlatform12" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(2214, -251)
+
+[node name="OneWayPlatform13" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(2103, -251)
+
+[node name="OneWayPlatform14" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(2036, -251)
+
+[node name="OneWayPlatform15" parent="SceneObjects/OneWayPlatformsGroup" instance=ExtResource("11_e1lcs")]
+position = Vector2(1968, -251)
+
+[node name="RoadBlocksGroup" type="Node" parent="SceneObjects"]
+
+[node name="RoadBlockPlatform" parent="SceneObjects/RoadBlocksGroup" instance=ExtResource("12_5yibu")]
+position = Vector2(2366, -455)
+rotation = 1.5708
+
+[node name="RoadBlockPlatform2" parent="SceneObjects/RoadBlocksGroup" instance=ExtResource("12_5yibu")]
+position = Vector2(2277, -434)
+rotation = 1.5708
+scale = Vector2(0.871775, 2)
+
+[node name="ArrowSignsGroup" type="Node" parent="SceneObjects"]
+
+[node name="ArrowSign" parent="SceneObjects/ArrowSignsGroup" instance=ExtResource("13_j554y")]
+position = Vector2(1600, -357)
+
+[node name="ArrowSign2" parent="SceneObjects/ArrowSignsGroup" instance=ExtResource("13_j554y")]
+position = Vector2(1566.5, -437)
+
+[node name="ArrowSign3" parent="SceneObjects/ArrowSignsGroup" instance=ExtResource("13_j554y")]
+position = Vector2(2322.5, -487)
+rotation = -3.14159
+
+[node name="ArrowSign4" parent="SceneObjects/ArrowSignsGroup" instance=ExtResource("13_j554y")]
+position = Vector2(2321, -324)
+rotation = -3.14159
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -1183,17 +1349,8 @@ vertical_alignment = 1
 visible = false
 game_manager = NodePath("../../GameManager")
 
-[node name="MovingPlatform" parent="." instance=ExtResource("9_3khnj")]
-position = Vector2(966, 429)
-
-[node name="MovingPlatform2" parent="." instance=ExtResource("9_3khnj")]
-position = Vector2(1440, 444)
-
-[node name="MovingPlatform3" parent="." instance=ExtResource("9_3khnj")]
-position = Vector2(662, 380)
-
-[node name="MovingPlatform4" parent="." instance=ExtResource("9_3khnj")]
-position = Vector2(1627, 274)
-
-[node name="MovingPlatform5" parent="." instance=ExtResource("9_3khnj")]
-position = Vector2(942, 327)
+[node name="HintPanel" parent="UI" instance=ExtResource("15_rj61y")]
+offset_left = 860.0
+offset_top = 17.0
+offset_right = 1139.0
+offset_bottom = 57.0

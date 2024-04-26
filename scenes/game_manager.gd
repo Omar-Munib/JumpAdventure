@@ -25,7 +25,7 @@ func _ready():
 func add_point():
 	points += 1
 	print(points)
-	points_label.text = "Points: " + str(points)
+	points_label.text = "Points: " + str(points) + "/" + str(total_collectibles)
 
 func collect_collectible():
 	collectibles_collected += 1

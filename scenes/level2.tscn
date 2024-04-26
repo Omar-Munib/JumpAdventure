@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cnkivx38rcg6q"]
+[gd_scene load_steps=13 format=3 uid="uid://cnkivx38rcg6q"]
 
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_gw5cc"]
 [ext_resource type="Texture2D" uid="uid://cpieulh257td8" path="res://assets/Green.png" id="2_hwibl"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ryuof13g1n12" path="res://scenes/finish.tscn" id="7_4e3ix"]
 [ext_resource type="PackedScene" uid="uid://hwo8kr6nt78b" path="res://scenes/level3.tscn" id="8_o4ur8"]
 [ext_resource type="PackedScene" uid="uid://c8g0ixi6liln8" path="res://scenes/pause_menu.tscn" id="9_d4ty3"]
+[ext_resource type="PackedScene" uid="uid://hwfxl2uddg5x" path="res://scenes/hint_panel.tscn" id="10_8usy6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbbsi"]
 texture = ExtResource("3_txal3")
@@ -636,4 +637,11 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PauseMenu" parent="UI" node_paths=PackedStringArray("game_manager") instance=ExtResource("9_d4ty3")]
+texture_filter = 1
 game_manager = NodePath("../../GameManager")
+
+[node name="HintPanel" parent="UI" instance=ExtResource("10_8usy6")]
+offset_left = 863.0
+offset_top = 17.0
+offset_right = 1142.0
+offset_bottom = 57.0

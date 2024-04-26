@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://hwfxl2uddg5x"]
+
+[node name="HintPanel" type="Panel"]
+offset_right = 279.0
+offset_bottom = 40.0
+metadata/_edit_group_ = true
+
+[node name="HintLabel" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 279.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 30
+text = "Press R to restart"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -39,3 +39,7 @@ func _physics_process(delta):
 func _unhandled_input(event):
 	if event.is_action_pressed("restart"):
 		get_tree().reload_current_scene()
+
+func _input(event : InputEvent):
+	if (event.is_action_pressed("down") && is_on_floor()):
+		position.y += 1
