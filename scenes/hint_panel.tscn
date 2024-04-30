@@ -2,7 +2,7 @@
 
 [node name="HintPanel" type="Panel"]
 offset_right = 279.0
-offset_bottom = 40.0
+offset_bottom = 87.0
 metadata/_edit_group_ = true
 
 [node name="HintLabel" type="Label" parent="."]
@@ -11,6 +11,7 @@ layout_mode = 0
 offset_right = 279.0
 offset_bottom = 40.0
 theme_override_font_sizes/font_size = 30
-text = "Press R to restart"
+text = "Press R to restart
+ESC/Tap to pause"
 horizontal_alignment = 1
 vertical_alignment = 1

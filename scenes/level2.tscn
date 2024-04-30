@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cnkivx38rcg6q"]
+[gd_scene load_steps=15 format=3 uid="uid://cnkivx38rcg6q"]
 
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_gw5cc"]
 [ext_resource type="Texture2D" uid="uid://cpieulh257td8" path="res://assets/Green.png" id="2_hwibl"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://hwo8kr6nt78b" path="res://scenes/level3.tscn" id="8_o4ur8"]
 [ext_resource type="PackedScene" uid="uid://c8g0ixi6liln8" path="res://scenes/pause_menu.tscn" id="9_d4ty3"]
 [ext_resource type="PackedScene" uid="uid://hwfxl2uddg5x" path="res://scenes/hint_panel.tscn" id="10_8usy6"]
+[ext_resource type="PackedScene" uid="uid://cpwyej5q5idcx" path="res://scenes/touch_buttons_left_right.tscn" id="11_jardt"]
+[ext_resource type="PackedScene" uid="uid://u1iw0ajhfulo" path="res://scenes/touch_buttons_up_down.tscn" id="12_oa54m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbbsi"]
 texture = ExtResource("3_txal3")
@@ -644,4 +646,10 @@ game_manager = NodePath("../../GameManager")
 offset_left = 863.0
 offset_top = 17.0
 offset_right = 1142.0
-offset_bottom = 57.0
+offset_bottom = 106.0
+
+[node name="TouchButtonsLeftRight" parent="UI" instance=ExtResource("11_jardt")]
+position = Vector2(49, 566)
+
+[node name="TouchButtonsUpDown" parent="UI" instance=ExtResource("12_oa54m")]
+position = Vector2(950, 566)
