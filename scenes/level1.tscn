@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bd6ei81ena782"]
+[gd_scene load_steps=16 format=3 uid="uid://bd6ei81ena782"]
 
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_sbc5a"]
 [ext_resource type="Texture2D" uid="uid://cpieulh257td8" path="res://assets/Green.png" id="2_0jm62"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://hwfxl2uddg5x" path="res://scenes/hint_panel.tscn" id="10_5kyud"]
 [ext_resource type="PackedScene" uid="uid://cpwyej5q5idcx" path="res://scenes/touch_buttons_left_right.tscn" id="11_0xleu"]
 [ext_resource type="PackedScene" uid="uid://u1iw0ajhfulo" path="res://scenes/touch_buttons_up_down.tscn" id="12_8x0jk"]
+[ext_resource type="PackedScene" uid="uid://b20dwg2dk3a51" path="res://scenes/restart_and_pause_buttons.tscn" id="13_mg06p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbbsi"]
 texture = ExtResource("3_5brvw")
@@ -587,7 +588,10 @@ offset_right = 1140.0
 offset_bottom = 104.0
 
 [node name="TouchButtonsLeftRight" parent="UI" instance=ExtResource("11_0xleu")]
-position = Vector2(49, 566)
+position = Vector2(49, 494)
 
 [node name="TouchButtonsUpDown" parent="UI" instance=ExtResource("12_8x0jk")]
-position = Vector2(950, 566)
+position = Vector2(829, 498)
+
+[node name="RestartAndPauseButtons" parent="UI" instance=ExtResource("13_mg06p")]
+position = Vector2(49, 116)

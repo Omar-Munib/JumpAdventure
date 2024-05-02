@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b20dwg2dk3a51"]
+
+[ext_resource type="Texture2D" uid="uid://0mibbwmgc3m8" path="res://assets/restartButton-Photoroom.png" id="1_eklda"]
+[ext_resource type="Texture2D" uid="uid://c5220d3kbgpk6" path="res://assets/PauseButton-Photoroom.png" id="2_hl7du"]
+
+[node name="RestartAndPauseButtons" type="Node2D"]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+texture_filter = 1
+scale = Vector2(0.259259, 0.205128)
+texture_normal = ExtResource("1_eklda")
+action = "restart"
+visibility_mode = 1
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+position = Vector2(88, 0)
+scale = Vector2(0.313043, 0.219178)
+texture_normal = ExtResource("2_hl7du")
+action = "pause"
+visibility_mode = 1

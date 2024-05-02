@@ -7,15 +7,15 @@
 
 [node name="JumpButton" type="TouchScreenButton" parent="."]
 texture_filter = 1
-position = Vector2(88, 0)
-scale = Vector2(0.25, 0.25)
+position = Vector2(168, 0)
+scale = Vector2(0.46875, 0.449219)
 texture_normal = ExtResource("1_55ilv")
 action = "jump"
 visibility_mode = 1
 
 [node name="DownButton" type="TouchScreenButton" parent="."]
 texture_filter = 1
-scale = Vector2(0.125, 0.125)
+scale = Vector2(0.225, 0.225)
 texture_normal = ExtResource("2_0sqnd")
 action = "down"
 visibility_mode = 1

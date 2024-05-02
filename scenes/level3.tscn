@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://hwo8kr6nt78b"]
+[gd_scene load_steps=17 format=3 uid="uid://hwo8kr6nt78b"]
 
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_v51xv"]
 [ext_resource type="Texture2D" uid="uid://bd2umi8g82kwk" path="res://assets/Gray.png" id="2_6mrh1"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://hwfxl2uddg5x" path="res://scenes/hint_panel.tscn" id="11_72250"]
 [ext_resource type="PackedScene" uid="uid://cpwyej5q5idcx" path="res://scenes/touch_buttons_left_right.tscn" id="12_48uqu"]
 [ext_resource type="PackedScene" uid="uid://u1iw0ajhfulo" path="res://scenes/touch_buttons_up_down.tscn" id="13_3ise0"]
+[ext_resource type="PackedScene" uid="uid://b20dwg2dk3a51" path="res://scenes/restart_and_pause_buttons.tscn" id="14_l4m4j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cbbsi"]
 texture = ExtResource("3_gq7do")
@@ -722,13 +723,13 @@ position = Vector2(2124, 628)
 offset_left = 21.0
 offset_top = 17.0
 offset_right = 299.0
-offset_bottom = 111.0
+offset_bottom = 106.0
 
 [node name="PointsLabel" type="Label" parent="UI/Panel"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_right = 278.0
-offset_bottom = 94.0
+offset_bottom = 89.0
 theme_override_font_sizes/font_size = 30
 text = "Points: 0"
 horizontal_alignment = 1
@@ -744,7 +745,10 @@ offset_right = 1144.0
 offset_bottom = 112.0
 
 [node name="TouchButtonsLeftRight" parent="UI" instance=ExtResource("12_48uqu")]
-position = Vector2(49, 566)
+position = Vector2(49, 498)
 
 [node name="TouchButtonsUpDown" parent="UI" instance=ExtResource("13_3ise0")]
-position = Vector2(950, 566)
+position = Vector2(829, 498)
+
+[node name="RestartAndPauseButtons" parent="UI" instance=ExtResource("14_l4m4j")]
+position = Vector2(49, 112)
