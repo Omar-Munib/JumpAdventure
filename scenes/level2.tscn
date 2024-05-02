@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cnkivx38rcg6q"]
+[gd_scene load_steps=18 format=3 uid="uid://cnkivx38rcg6q"]
 
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_gw5cc"]
 [ext_resource type="Texture2D" uid="uid://cpieulh257td8" path="res://assets/Green.png" id="2_hwibl"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ryuof13g1n12" path="res://scenes/finish.tscn" id="7_4e3ix"]
 [ext_resource type="PackedScene" uid="uid://hwo8kr6nt78b" path="res://scenes/level3.tscn" id="8_o4ur8"]
 [ext_resource type="PackedScene" uid="uid://c8g0ixi6liln8" path="res://scenes/pause_menu.tscn" id="9_d4ty3"]
+[ext_resource type="PackedScene" uid="uid://bwysm6pykir60" path="res://scenes/restart_note.tscn" id="9_j5261"]
 [ext_resource type="PackedScene" uid="uid://hwfxl2uddg5x" path="res://scenes/hint_panel.tscn" id="10_8usy6"]
 [ext_resource type="PackedScene" uid="uid://cpwyej5q5idcx" path="res://scenes/touch_buttons_left_right.tscn" id="11_jardt"]
 [ext_resource type="PackedScene" uid="uid://u1iw0ajhfulo" path="res://scenes/touch_buttons_up_down.tscn" id="12_oa54m"]
@@ -536,6 +537,9 @@ texture = ExtResource("3_txal3")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_cbbsi")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypmps"]
+size = Vector2(1756, 21)
+
 [node name="Node" type="Node"]
 process_mode = 3
 
@@ -621,6 +625,13 @@ position = Vector2(429, 194)
 position = Vector2(2326, 190)
 target_level = ExtResource("8_o4ur8")
 
+[node name="RestartNote" parent="SceneObjects" instance=ExtResource("9_j5261")]
+position = Vector2(466, 628)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/RestartNote"]
+position = Vector2(1094, 0.5)
+shape = SubResource("RectangleShape2D_ypmps")
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -657,3 +668,20 @@ position = Vector2(829, 498)
 
 [node name="RestartAndPauseButtons" parent="UI" instance=ExtResource("13_0nj5i")]
 position = Vector2(49, 115)
+
+[node name="Panel2" type="Panel" parent="UI"]
+offset_left = 392.0
+offset_top = 144.0
+offset_right = 780.0
+offset_bottom = 256.0
+
+[node name="RestartNoteLabel" type="Label" parent="UI/Panel2"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 388.0
+offset_bottom = 112.0
+theme_override_font_sizes/font_size = 24
+text = "Stuck already? :D
+Press R or restart icon to restart"
+horizontal_alignment = 1
+vertical_alignment = 1

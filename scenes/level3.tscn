@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://hwo8kr6nt78b"]
+[gd_scene load_steps=19 format=3 uid="uid://hwo8kr6nt78b"]
 
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="1_v51xv"]
 [ext_resource type="Texture2D" uid="uid://bd2umi8g82kwk" path="res://assets/Gray.png" id="2_6mrh1"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ryuof13g1n12" path="res://scenes/finish.tscn" id="7_c5q8d"]
 [ext_resource type="PackedScene" uid="uid://duk4h4c1kmmp2" path="res://scenes/level4.tscn" id="8_s0met"]
 [ext_resource type="PackedScene" uid="uid://digdvu8y0buni" path="res://scenes/spike_trap.tscn" id="9_kchoq"]
+[ext_resource type="PackedScene" uid="uid://bwysm6pykir60" path="res://scenes/restart_note.tscn" id="10_0yxk5"]
 [ext_resource type="PackedScene" uid="uid://c8g0ixi6liln8" path="res://scenes/pause_menu.tscn" id="10_sgl22"]
 [ext_resource type="PackedScene" uid="uid://hwfxl2uddg5x" path="res://scenes/hint_panel.tscn" id="11_72250"]
 [ext_resource type="PackedScene" uid="uid://cpwyej5q5idcx" path="res://scenes/touch_buttons_left_right.tscn" id="12_48uqu"]
@@ -559,6 +560,9 @@ texture = ExtResource("3_gq7do")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_cbbsi")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cakm"]
+size = Vector2(816, 20)
+
 [node name="Node" type="Node"]
 process_mode = 3
 
@@ -717,6 +721,13 @@ position = Vector2(2317, 629)
 [node name="SpikeTrap21" parent="SceneObjects/SpikesGroup" instance=ExtResource("9_kchoq")]
 position = Vector2(2124, 628)
 
+[node name="RestartNote" parent="SceneObjects" instance=ExtResource("10_0yxk5")]
+position = Vector2(1299, 627)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/RestartNote"]
+position = Vector2(398, 0)
+shape = SubResource("RectangleShape2D_4cakm")
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -752,3 +763,20 @@ position = Vector2(829, 498)
 
 [node name="RestartAndPauseButtons" parent="UI" instance=ExtResource("14_l4m4j")]
 position = Vector2(49, 112)
+
+[node name="Panel2" type="Panel" parent="UI"]
+offset_left = 382.0
+offset_top = 144.0
+offset_right = 770.0
+offset_bottom = 256.0
+
+[node name="RestartNoteLabel" type="Label" parent="UI/Panel2"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 388.0
+offset_bottom = 112.0
+theme_override_font_sizes/font_size = 24
+text = "Stuck already? :D
+Press R or restart icon to restart"
+horizontal_alignment = 1
+vertical_alignment = 1

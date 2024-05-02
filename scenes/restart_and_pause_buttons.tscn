@@ -10,7 +10,6 @@ texture_filter = 1
 scale = Vector2(0.259259, 0.205128)
 texture_normal = ExtResource("1_eklda")
 action = "restart"
-visibility_mode = 1
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
 position = Vector2(88, 0)
