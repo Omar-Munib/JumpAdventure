@@ -33,8 +33,10 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
-	var isLeft = velocity.x < 0
-	sprite_2d.flip_h = isLeft
+	if direction > 0:
+		sprite_2d.flip_h = false
+	elif direction < 0:
+		sprite_2d.flip_h = true
 
 func _unhandled_input(event):
 	if event.is_action_pressed("restart"):
