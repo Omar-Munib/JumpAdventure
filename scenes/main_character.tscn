@@ -258,8 +258,7 @@ scale = Vector2(1.28125, 1.6875)
 sprite_frames = SubResource("SpriteFrames_jav7x")
 animation = &"hit"
 autoplay = "default"
-frame = 1
-frame_progress = 0.918205
+frame_progress = 0.203373
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1

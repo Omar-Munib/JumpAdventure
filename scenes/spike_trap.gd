@@ -13,7 +13,11 @@ func _on_body_entered(body):
 		
 		if body.has_method("play_hit_animation"):
 			print("animation found")
+			
 			# Call the play_hit_animation method of the character
+			body.play_hit_animation()
+		# timer for 2 seconds
+		
 		timer.start()
 
 func _on_timer_timeout():
