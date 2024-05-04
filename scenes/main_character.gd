@@ -38,6 +38,10 @@ func _physics_process(delta):
 	elif direction < 0:
 		sprite_2d.flip_h = true
 
+# Method to play the "hit" animation
+func play_hit_animation():
+	sprite_2d.animation = "hit"
+
 func _unhandled_input(event):
 	if event.is_action_pressed("restart"):
 		get_tree().reload_current_scene()
