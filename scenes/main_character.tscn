@@ -250,16 +250,15 @@ radius = 14.0
 height = 44.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 5
+texture_filter = 1
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(96.5, 45)
 scale = Vector2(1.28125, 1.6875)
 sprite_frames = SubResource("SpriteFrames_jav7x")
-animation = &"hit"
 autoplay = "default"
-frame = 1
-frame_progress = 0.918205
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1

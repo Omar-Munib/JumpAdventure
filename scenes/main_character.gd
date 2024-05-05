@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -450.0
+var default_anim = "default"
 @onready var sprite_2d = $Sprite2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -12,7 +13,7 @@ func _physics_process(delta):
 	if (velocity.x > 1 || velocity.x < -1):
 		sprite_2d.animation = "running"
 	else:
-		sprite_2d.animation = "default"
+		sprite_2d.animation = str(default_anim)
 
 	# Add the gravity.
 	if not is_on_floor():
@@ -40,7 +41,9 @@ func _physics_process(delta):
 
 # Method to play the "hit" animation
 func play_hit_animation():
-	sprite_2d.animation = "hit"
+	print("player got hit")
+	default_anim = "hit"
+
 
 func _unhandled_input(event):
 	if event.is_action_pressed("restart"):
