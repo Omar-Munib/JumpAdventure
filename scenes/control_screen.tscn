@@ -37,10 +37,10 @@ layout_mode = 0
 offset_right = 400.0
 offset_bottom = 243.0
 theme_override_font_sizes/font_size = 30
-text = "Move right:  D
-Move left:    A
-Jump:  W, Space, arrow up
-Down:  S (Down arrow)"
+text = "Move right: D (Right arrow)
+Move left: A (Left Arrow)
+Jump: W, Space, arrow up
+Down: S (Down arrow)"
 
 [node name="Label2" type="Label" parent="Panel"]
 layout_mode = 0
@@ -48,8 +48,8 @@ offset_left = 400.0
 offset_right = 815.0
 offset_bottom = 243.0
 theme_override_font_sizes/font_size = 32
-text = "Restart level:  R
-Pause game:   ESC button"
+text = "  Restart level:  R
+  Pause game:   ESC button"
 
 [node name="Button" type="Button" parent="."]
 texture_filter = 1

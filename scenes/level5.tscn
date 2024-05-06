@@ -531,6 +531,21 @@ sources/5 = SubResource("TileSetAtlasSource_x7p6b")
 sources/6 = SubResource("TileSetAtlasSource_536c4")
 sources/7 = SubResource("TileSetAtlasSource_jcrgo")
 
+[sub_resource type="Animation" id="Animation_fmckk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(907, 681)]
+}
+
 [sub_resource type="Animation" id="Animation_o2wkr"]
 resource_name = "move"
 length = 2.0
@@ -548,7 +563,13 @@ tracks/0/keys = {
 "values": [Vector2(907, 681), Vector2(1383, 681)]
 }
 
-[sub_resource type="Animation" id="Animation_fmckk"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_51qgp"]
+_data = {
+"RESET": SubResource("Animation_fmckk"),
+"move": SubResource("Animation_o2wkr")
+}
+
+[sub_resource type="Animation" id="Animation_tv30v"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -560,13 +581,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(907, 681)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_51qgp"]
-_data = {
-"RESET": SubResource("Animation_fmckk"),
-"move": SubResource("Animation_o2wkr")
+"values": [Vector2(2153, 679)]
 }
 
 [sub_resource type="Animation" id="Animation_1aakp"]
@@ -584,21 +599,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(2153, 679), Vector2(2671, 679)]
-}
-
-[sub_resource type="Animation" id="Animation_tv30v"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2153, 679)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6vm8h"]
@@ -809,6 +809,12 @@ position = Vector2(1200, 141)
 [node name="EnemySlimeYellow" parent="SceneObjects/EnemiesGroup" instance=ExtResource("20_n4cdi")]
 position = Vector2(2103, 11)
 
+[node name="EnemySlimeBlue" parent="SceneObjects/EnemiesGroup" instance=ExtResource("22_1ltnb")]
+position = Vector2(1255, -372)
+
+[node name="EnemySlimeBlue2" parent="SceneObjects/EnemiesGroup" instance=ExtResource("22_1ltnb")]
+position = Vector2(722, -372)
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -838,7 +844,6 @@ offset_right = 1139.0
 offset_bottom = 111.0
 
 [node name="TouchButtonsLeftRight" parent="UI" instance=ExtResource("16_4itnf")]
-visible = false
 position = Vector2(49, 498)
 
 [node name="TouchButtonsUpDown" parent="UI" instance=ExtResource("17_6bck3")]
@@ -846,9 +851,3 @@ position = Vector2(829, 498)
 
 [node name="RestartAndPauseButtons" parent="UI" instance=ExtResource("18_1pnu2")]
 position = Vector2(21, 117)
-
-[node name="EnemySlimeBlue" parent="." instance=ExtResource("22_1ltnb")]
-position = Vector2(1255, -372)
-
-[node name="EnemySlimeBlue2" parent="." instance=ExtResource("22_1ltnb")]
-position = Vector2(722, -372)
