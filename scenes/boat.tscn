@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjl01dwk2htse"]
+
+[ext_resource type="Texture2D" uid="uid://bjk63gn3tf4l5" path="res://assets/2D Boats and fishing asset pack/Boat.png" id="1_vkrfu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xpbh5"]
+radius = 6.0
+height = 86.0
+
+[node name="Boat" type="AnimatableBody2D"]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(9.5, 3.5)
+scale = Vector2(1.25676, 1.38889)
+texture = ExtResource("1_vkrfu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, 8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_xpbh5")
