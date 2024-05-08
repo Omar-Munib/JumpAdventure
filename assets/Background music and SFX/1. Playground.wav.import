@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dh0wkhedpx0qp"
+path="res://.godot/imported/1. Playground.wav-d1dab839bebacb6248301796b3f10c31.sample"
+
+[deps]
+
+source_file="res://assets/Background music and SFX/1. Playground.wav"
+dest_files=["res://.godot/imported/1. Playground.wav-d1dab839bebacb6248301796b3f10c31.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

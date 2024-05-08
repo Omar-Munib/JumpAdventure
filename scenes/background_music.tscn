@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://1xwxihxnpirg"]
+
+[ext_resource type="AudioStream" uid="uid://df4p7qruhewpe" path="res://assets/Background music and SFX/2. Green Field.mp3" id="1_q4rv3"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_q4rv3")
+autoplay = true
+bus = &"Background"

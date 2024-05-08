@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cya8n8cotigrx"
+path="res://.godot/imported/coin-collect-retro-8-bit-sound-effect-145251.mp3-e3a6c93349c69bbd2cd8137e31cbc509.mp3str"
+
+[deps]
+
+source_file="res://assets/Background music and SFX/coin-collect-retro-8-bit-sound-effect-145251.mp3"
+dest_files=["res://.godot/imported/coin-collect-retro-8-bit-sound-effect-145251.mp3-e3a6c93349c69bbd2cd8137e31cbc509.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

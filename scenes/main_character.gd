@@ -48,6 +48,7 @@ func play_hit_animation():
 func _unhandled_input(event):
 	if event.is_action_pressed("restart"):
 		get_tree().reload_current_scene()
+		Engine.time_scale = 1.0
 
 func _input(event : InputEvent):
 	if (event.is_action_pressed("down") && is_on_floor()):
