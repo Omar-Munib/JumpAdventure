@@ -39,20 +39,29 @@ texture = ExtResource("2_logev")
 [node name="LevelSelectButton" type="Button" parent="."]
 texture_filter = 1
 offset_left = 438.0
-offset_top = 301.0
+offset_top = 269.0
 offset_right = 705.0
-offset_bottom = 401.0
+offset_bottom = 350.0
 theme_override_font_sizes/font_size = 30
 text = "Level Select"
+
+[node name="SettingsButton" type="Button" parent="."]
+offset_left = 438.0
+offset_top = 374.0
+offset_right = 705.0
+offset_bottom = 458.0
+theme_override_font_sizes/font_size = 32
+text = "Settings"
 
 [node name="Button4" type="Button" parent="."]
 texture_filter = 1
 offset_left = 438.0
-offset_top = 431.0
+offset_top = 490.0
 offset_right = 705.0
-offset_bottom = 531.0
+offset_bottom = 571.0
 theme_override_font_sizes/font_size = 30
 text = "Controls"
 
 [connection signal="pressed" from="LevelSelectButton" to="." method="_on_level_select_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
