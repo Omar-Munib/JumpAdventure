@@ -15,6 +15,14 @@ func _on_game_manager_toggle_game_paused(is_paused : bool):
 	else:
 		hide()
 
+func _on_settings_button_pressed():
+	var settings_container = get_node("Panel/VBoxContainer/SettingsButton/PanelContainer")
+	print(self.get_path())
+	if settings_container:
+		settings_container.show()
+		print("container found")
+	else:
+		print("container not found")
 
 func _on_resume_button_pressed():
 	game_manager.game_paused = false
@@ -25,3 +33,7 @@ func _on_exit_button_pressed():
 	#game_manager.game_paused = false
 #to exit the game and shut it off use code below
 	#get_tree().quit() 
+
+
+
+
